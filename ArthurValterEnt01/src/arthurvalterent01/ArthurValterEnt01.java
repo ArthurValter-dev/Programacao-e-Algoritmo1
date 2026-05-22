@@ -22,6 +22,15 @@ public class ArthurValterEnt01 {
             }
             cont++;
         }
+while(n2 <=n1){
+            n2 = n2+2;
+            JOptionPane.showMessageDialog(null,"O "+cont+"° e "+n2);
+            
+            if(n2 == n1){
+                break;
+            }
+            cont++;
+        }
     }
     
 }
