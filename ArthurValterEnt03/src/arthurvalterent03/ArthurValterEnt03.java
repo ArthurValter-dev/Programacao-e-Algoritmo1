@@ -4,17 +4,24 @@
  */
 package arthurvalterent03;
 
-/**
- *
- * @author Admin
- */
+import javax.swing.JOptionPane;
 public class ArthurValterEnt03 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        //Escreva um programa que receba 15 números e imprima 
+        //quantos números maiores que 30 foram digitados.
+        int Cont = 0; //Mostra quantos numeros sao maiores do que 30 ao fim do codigo
+        
+        for(int Ent = 1; Ent <= 15;Ent++){
+        String input = JOptionPane.showInputDialog("Digite 15 numeros por favor: ("+Ent+"/15)");
+        int N = Integer.parseInt(input);
+        // Se o vaolor de N for maior do que 30 mostra o valor de N com uma frase
+        if (N > 30){
+            JOptionPane.showMessageDialog(null,"O "+N+" e maior que 30");
+            Cont++;//Acresentado valor no contador 
+        }
+         JOptionPane.showMessageDialog(null, "Dos 15 números, um total de "+Cont+" foram maiores do que 30.");
+        }
     }
     
 }
