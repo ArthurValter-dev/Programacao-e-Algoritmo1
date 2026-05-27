@@ -11,42 +11,23 @@ public class ArthurValterEnt04 {
         /*Escreva um programa que leia vários números e informe quantos números entre 100 e 200
         foram digitados. Quando o valor 0 (zero) for lido, o algoritmo deverá cessar sua execução. 
         Para esta resolução não utilizar a estrutura “for”. */
-        
-        
-        String input = JOptionPane.showInputDialog("Digite qualquer numero entre 100 e 200 para fazer a somar do todos");
-        int N = Integer.parseInt(input);
+        int i = 1; //Conta as execuções do prompt de pedir número 
+        int cont = 0;
         int soma = 0;// Variavel que somara do usuarios os codigo
         //Se o numero for menor que 100
-            
-        while(N != 0){
-            
-            //Soma em loop recebendo os valores lidos na variavel soma
-            if (N < 100){
-            JOptionPane.showMessageDialog(null,"O numero menor que 100");
-            input = JOptionPane.showInputDialog("Digite qualquer numero entre 100 e 200");
-            N = Integer.parseInt(input);
-            }
-            if (N >= 200){
-            JOptionPane.showMessageDialog(null,"O numero maior que 200");
-            input = JOptionPane.showInputDialog("Digite qualquer numero entre 100 e 200");
-            N = Integer.parseInt(input);
-            }
-            else{
-                soma = soma + N;
-                JOptionPane.showMessageDialog(null,"A soma de todos e "+ soma);
-            //Pedido qualquer numero menos o zero
-        input = JOptionPane.showInputDialog("Digite qualquer numero");
-        N = Integer.parseInt(input);
-            }
-            //Pedido qualquer numero menos o zero
-        input = JOptionPane.showInputDialog("Digite qualquer numero");
-        N = Integer.parseInt(input);
         
+        do{
+        String input = JOptionPane.showInputDialog("Digite qualquer numero entre 100 e 200 para fazer a somar do todos");
+        int N = Integer.parseInt(input);//Contém o valor digitado no prompt
+       
+        
+        if(N == 0){
+            return;//Verifica-se se 0 foi o valor digitado a cada valor recebido, caso seja o código é encerrado
         }
-        //Quando o usuario enviar o zero o codigo cessará
-        //Soma final dos valores
-        JOptionPane.showMessageDialog(null,"A soma de todos e "+ soma);
-        
+        }while ();
+        JOptionPane.showMessageDialog(null, ""+cont+" números foram maiores que 100 e menores que 200.");
+
+
+
     }
-    
 }
