@@ -6,7 +6,7 @@ package pkg8ºexer;
 
 /**
  *
- * @author Admin
+ * @author Arthur V
  */
 
 import javax.swing.JOptionPane;
@@ -31,16 +31,43 @@ public class Main {
         c = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite um valor para c"));
         
         //Caso a for o menor
-        if(a < b || a < c){
-            
-            // B sendo o segundo menor
-            if(b < c) JOptionPane.showMessageDialog(null,c+" "+b+" "+a);
-            
-            
-            else JOptionPane.showMessageDialog(null,b+" "+c+" "+a);
+        if(a < b && a < c){
+            // Se B for 2ºmenor
+            if(b < c){
+                JOptionPane.showMessageDialog(null,"A: "+a+"\nB: "+b+"\nC: "+c+"\n Ordem Descrescente: \n"+c+" "+b+" "+a);
+            }
+            // Se C for 2ºmenor
+            else if(c < b){
+                JOptionPane.showMessageDialog(null,"A: "+a+"\nB: "+b+"\nC: "+c+"\n Ordem Descrescente: \n"+b+" "+c+" "+a);
+            }
         }
         
-        //Caso b for 
+        // Caso B for o menor
+        else if(b < a && b < c){
+            
+            // Se A for 2ºmenor
+            if(a < c){
+                JOptionPane.showMessageDialog(null,"A: "+a+"\nB: "+b+"\nC: "+c+"\n Ordem Descrescente: \n"+c+" "+a+" "+b);
+            }
+            
+            // Se C for 2ºmenor
+            else if(c < a){
+                JOptionPane.showMessageDialog(null,"A: "+a+"\nB: "+b+"\nC: "+c+"\n Ordem Descrescente: \n"+c+" "+a+" "+b);
+            }
+        }
+        
+        //Caso C for menor
+        else if(c < a && c < b){
+            
+            // Se A for 2ºmenor
+            if(a < b) {
+                JOptionPane.showMessageDialog(null,"A: "+a+"\nB: "+b+"\nC: "+c+"\n Ordem Descrescente: \n"+b+" "+a+" "+c);
+            }
+            
+            // Se B for 2º menor
+            else if(b < a){
+                JOptionPane.showMessageDialog(null,"A: "+a+"\nB: "+b+"\nC: "+c+"\n Ordem Descrescente: \n"+a+" "+b+" "+c);
+            }
+        }
     }
-    
 }
